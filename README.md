@@ -46,7 +46,6 @@ WANDERLUST/
 
 ## 🚀 Installation / Setup
 1. Clone the repo:
-```bash
 git clone https://github.com/Anvesh-999/WANDERLUST.git
 2. Navigate into the project folder:
   cd WANDERLUST
