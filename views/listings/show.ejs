@@ -45,6 +45,7 @@
 
   <p><b>All Reviews</b></p>
   <div class="row">
+  <% if (listing.reviews && listing.reviews.length > 0) { %>
   <% for(review of listing.reviews){ %>
     <div class="card col-5 ms-3 mb-3">
       <div class="card-body">
@@ -56,6 +57,9 @@
         <button class="btn btn-sm btn-dark">Delete</button>
       </form>
     </div>
+  <% } %>
+   <% } else { %>
+    <p>No reviews yet.</p>
   <% } %>
 </div>
 </div>
