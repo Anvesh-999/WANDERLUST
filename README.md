@@ -6,9 +6,8 @@
 [![EJS](https://img.shields.io/badge/EJS-4B0082?logo=EJS&logoColor=white)](https://ejs.co/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 
-Wanderlust is a **full-stack travel and hotel booking platform**.  
-Users can explore, add, edit, and manage hotel listings using a fully dynamic backend and EJS frontend.
-
+Wanderlust is a full-stack travel and hotel booking platform.
+Users can explore, add, edit, and manage hotel listings through a dynamic backend and responsive EJS frontend.
 ---
 
 ## 🏆 Features
@@ -19,6 +18,10 @@ Users can explore, add, edit, and manage hotel listings using a fully dynamic ba
 - Dynamic EJS templates with responsive UI (Bootstrap)  
 - MongoDB database integration with Mongoose  
 - Fully functional CRUD operations for listings  
+- User authentication and authorization
+- Input validation using Joi (schema.js)
+- Flash messages for form success/error notifications
+
 
 ---
 
@@ -31,17 +34,53 @@ Users can explore, add, edit, and manage hotel listings using a fully dynamic ba
 ---
 
 ## 🗂️ Project Structure
+```bash
 WANDERLUST/
-├─ Models/ # MongoDB schemas
-├─ Routes/ # Express routes
-├─ Views/ # EJS templates
-├─ Public/ # CSS, JS, images
-├─ node_modules/ # ignored by git
-├─ app.js # main server file
-├─ package.json
-├─ package-lock.json
-└─ README.md
+├── init/
+│   ├── init.js           # Sample data for DB
+│   └── index.js          # Initialization scripts
+├── models/
+│   ├── listing.js        # Listing schema
+│   ├── review.js         # Review schema
+│   └── user.js           # User schema
+├── public/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── script.js
+├── routes/
+│   ├── listing.js
+│   ├── review.js
+│   └── user.js
+├── utils/
+│   ├── ExpressError.js   # Custom error class
+│   └── wrapAsync.js      # Async wrapper for routes
+├── views/
+│   ├── includes/
+│   │   ├── flash.ejs
+│   │   ├── footer.ejs
+│   │   └── navbar.ejs
+│   ├── layouts/
+│   │   └── boilerplate.ejs
+│   ├── listings/
+│   │   ├── edit.ejs
+│   │   ├── index.ejs
+│   │   ├── new.ejs
+│   │   └── show.ejs
+│   │── users/
+│   │   ├── login.ejs
+│   │   └── signup.ejs
+│   ├── error.ejs
+│  
+├── .gitignore
+├── app.js               # Main server file
+├── middleware.js        # Custom middleware (auth, validation)
+├── package-lock.json
+├── package.json  
+├── README.md           
+└── schema.js           # Validation schemas (Joi or similar)
 
+```
 ---
 
 ## 🚀 Installation / Setup
@@ -61,17 +100,23 @@ git clone https://github.com/Anvesh-999/WANDERLUST.git
 ----
 
 🔹 Routes Overview
-Route	Method	Description
-/listings	GET	Display all hotel listings
-/listings/new	GET	Show form to add new listing
-/listings	POST	Add new listing to database
-/listings/:id	GET	Show single listing details
-/listings/:id/edit	GET	Show form to edit listing
-/listings/:id	PUT	Update listing in database
-/listings/:id	DELETE	Delete listing from database
+```bash
+| Route                | Method   | Description                  |
+| -------------------- | -------- | ---------------------------- |
+| `/listings`          | GET      | Display all hotel listings   |
+| `/listings/new`      | GET      | Show form to add new listing |
+| `/listings`          | POST     | Add new listing to database  |
+| `/listings/:id`      | GET      | Show single listing details  |
+| `/listings/:id/edit` | GET      | Show form to edit listing    |
+| `/listings/:id`      | PUT      | Update listing in database   |
+| `/listings/:id`      | DELETE   | Delete listing from database |
+| `/users/signup`      | GET/POST | User registration            |
+| `/users/login`       | GET/POST | User login                   |
+| `/users/logout`      | GET      | Logout user                  |
 
+```
 👨‍💻 Author
 
 Anvesh Anumolu – Full Stack Developer
-📫 GitHub : https://github.com/Anvesh-999
- | LinkedIn: https://www.linkedin.com/in/anvesh-anumolu-472a66291/
+📫 [GitHub](https://github.com/Anvesh-999)
+🌐 [LinkedIn](https://www.linkedin.com/in/anvesh-anumolu-472a66291/)
