@@ -10,17 +10,33 @@ Wanderlust is a full-stack travel and hotel booking platform.
 Users can explore, add, edit, and manage hotel listings through a dynamic backend and responsive EJS frontend.
 ---
 
-## 🏆 Features
-- View all hotel listings (`/listings`)  
-- Add new listings (`/listings/new`)  
-- View single listing (`/listings/:id`)  
-- Edit/Delete listings (`/listings/:id/edit`)  
-- Dynamic EJS templates with responsive UI (Bootstrap)  
-- MongoDB database integration with Mongoose  
-- Fully functional CRUD operations for listings  
-- User authentication and authorization
-- Input validation using Joi (schema.js)
-- Flash messages for form success/error notifications
+✨ Features
+
+- 🏠 Add new listings – Create new property listings at /listings/new
+
+- 🔍 View single listing – Display details dynamically at /listings/:id
+
+- ✏️ Edit/Delete listings – Modify or remove listings at /listings/:id/edit
+
+- 🎨 Dynamic EJS templates – Responsive and elegant UI using Bootstrap
+
+- 🗄️ MongoDB Integration – Database operations handled via Mongoose
+
+- ⚙️ Full CRUD Functionality – Create, Read, Update, and Delete listings seamlessly
+
+- 🔐 User Authentication & Authorization – Secure access control using Passport
+
+- ✅ Input Validation – Validate user data using Joi (schema.js)
+
+- 💬 Flash Messages – Instant success/error feedback for user actions
+
+- 🧩 MVC Architecture – Clean separation of:
+
+    - Models for database schema and data handling
+
+    - Views for front-end rendering
+
+    - Controllers for business logic Ensuring better maintainability, scalability, and code reusability
 
 
 ---
@@ -36,6 +52,10 @@ Users can explore, add, edit, and manage hotel listings through a dynamic backen
 ## 🗂️ Project Structure
 ```bash
 WANDERLUST/
+├── controllers/
+│   ├── listings.js        
+│   ├── reviews.js         
+│   └── users.js
 ├── init/
 │   ├── init.js           # Sample data for DB
 │   └── index.js          # Initialization scripts
