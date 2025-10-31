@@ -107,29 +107,35 @@ WANDERLUST/
 ---
 
 ## 🚀 Installation / Setup
+Follow these simple steps to get Wanderlust running locally 👇
 
-1)Clone the repository
-
-git clone https://github.com/Anvesh-999/WANDERLUST.git
-cd WANDERLUST
-
-2)Install dependencies
-
-npm install
-
-3)Setup environment variables (.env)
-
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_KEY=your_api_key
-CLOUDINARY_SECRET=your_api_secret
-MONGO_URI=your_mongodb_connection_string
-PORT=3000
-
-4)Run the server
-
-node app.js
-
-Open: http://localhost:3000/listings
+🧩 1. Clone the Repository
+ ```bash
+  git clone https://github.com/Anvesh-999/WANDERLUST.git
+  cd WANDERLUST
+```
+⚙️ 2. Install Dependencies
+```bash
+  npm install
+```
+🔐 3. Configure Environment Variables
+Create a .env file in the project root and add your credentials:
+```bash
+  CLOUDINARY_CLOUD_NAME=your_cloud_name
+  CLOUDINARY_KEY=your_api_key
+  CLOUDINARY_SECRET=your_api_secret
+  MONGO_URI=your_mongodb_connection_string
+  PORT=3000
+```
+▶️ 4. Run the Application
+```bash 
+  node app.js
+```
+🌐 5. Access the App
+Now open your browser and visit:
+```bash
+👉 http://localhost:3000/listings
+```
 
 ----
 
