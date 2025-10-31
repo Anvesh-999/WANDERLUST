@@ -14,6 +14,8 @@ Users can explore, add, edit, and manage hotel listings through a dynamic backen
 
 - 🏠 Add new listings – Create new property listings at /listings/new
 
+- 🌆 Cloudinary Image Storage – Securely upload and store images in the cloud.
+
 - 🔍 View single listing – Display details dynamically at /listings/:id
 
 - ✏️ Edit/Delete listings – Modify or remove listings at /listings/:id/edit
@@ -32,19 +34,19 @@ Users can explore, add, edit, and manage hotel listings through a dynamic backen
 
 - 🧩 MVC Architecture – Clean separation of:
 
-    - Models for database schema and data handling
-
-    - Views for front-end rendering
-
-    - Controllers for business logic Ensuring better maintainability, scalability, and code reusability
+- 📱 Responsive Design – Built using Bootstrap for an elegant and mobile-friendly UI.
 
 
 ---
 
 ## 💻 Tech Stack
+
 - **Frontend:** HTML, CSS, Bootstrap, EJS  
 - **Backend:** Node.js, Express.js  
-- **Database:** MongoDB  
+- **Database:** MongoDB(Mongoose ORM)
+- **Authentication** Passport.js
+- **Validation:** Joi  
+- **Cloud Storage:** Cloudinary
 - **Version Control:** Git & GitHub  
 
 ---
@@ -57,7 +59,7 @@ WANDERLUST/
 │   ├── reviews.js         
 │   └── users.js
 ├── init/
-│   ├── init.js           # Sample data for DB
+│   ├── data.js           # Sample data for DB
 │   └── index.js          # Initialization scripts
 ├── models/
 │   ├── listing.js        # Listing schema
@@ -65,6 +67,7 @@ WANDERLUST/
 │   └── user.js           # User schema
 ├── public/
 │   ├── css/
+│   │   └── rating.css
 │   │   └── style.css
 │   └── js/
 │       └── script.js
@@ -104,18 +107,29 @@ WANDERLUST/
 ---
 
 ## 🚀 Installation / Setup
-1. Clone the repo:
+
+1)Clone the repository
+
 git clone https://github.com/Anvesh-999/WANDERLUST.git
-2. Navigate into the project folder:
-  cd WANDERLUST
-3. Install dependencies:
-  npm install
-4. Create a .env file and configure your database connection (example):
-  MONGO_URI=your_mongodb_connection_string
-  PORT=3000
-5. Start the server:
-  node app.js
-6. Open in browser: http://localhost:3000/listings
+cd WANDERLUST
+
+2)Install dependencies
+
+npm install
+
+3)Setup environment variables (.env)
+
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_KEY=your_api_key
+CLOUDINARY_SECRET=your_api_secret
+MONGO_URI=your_mongodb_connection_string
+PORT=3000
+
+4)Run the server
+
+node app.js
+
+Open: http://localhost:3000/listings
 
 ----
 
@@ -135,8 +149,18 @@ git clone https://github.com/Anvesh-999/WANDERLUST.git
 | `/users/logout`      | GET      | Logout user                  |
 
 ```
+
+☁️ Cloudinary Integration
+
+- Multer handles file uploads locally.
+
+- Cloudinary securely stores images in the cloud.
+
+- Each listing is linked with a Cloudinary image URL.
+
 👨‍💻 Author
 
 Anvesh Anumolu – Full Stack Developer
-📫 [GitHub](https://github.com/Anvesh-999)
-🌐 [LinkedIn](https://www.linkedin.com/in/anvesh-anumolu-472a66291/)
+
+- 📫 [GitHub](https://github.com/Anvesh-999)
+- 🌐 [LinkedIn](https://www.linkedin.com/in/anvesh-anumolu-472a66291/)
