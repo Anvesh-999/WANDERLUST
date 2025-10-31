@@ -10,12 +10,7 @@ const listingSchema=new Schema({
     description:String,
     image:{
         filename:String,
-        url:{
-            type:String,
-        default:"https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg",
-        set:(v)=> v==='' 
-        ? 'https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg': v
-        }
+        url:String
     },
     price: {
         type:Number,
