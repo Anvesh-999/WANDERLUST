@@ -38,20 +38,21 @@ module.exports.renderEditForm = async (req,res)=>{
         req.flash('error',"The listing your'e trying to access does not exist.");
         return res.redirect('/listings');
     }
-    if (!listing.image || !listing.image.url) {
-        listing.image = { url: "https://example.com/default-image.jpg" };
-    }
+    let originalImageUrl=listing.image.url;
+    originalImageUrl=originalImageUrl.replace('/upload','/upload/w_200');
     req.flash('success','Successfully edited a listing');
-    res.render('listings/edit',{listing});
+    res.render('listings/edit',{listing,originalImageUrl});
 };
 
 module.exports.updateListing = async(req,res)=>{
     let {id}=req.params;
-    if(typeof req.body.listing.image === 'string'){
-        req.body.listing.image = { url: req.body.listing.image };
-    }
-    
-    await Listing.findByIdAndUpdate(id,{...req.body.listing});
+   let listing = await Listing.findByIdAndUpdate(id,{...req.body.listing});
+   if(typeof req.file !== 'undefined') {
+   let url = req.file.path;
+   let filename = req.file.filename;
+   listing.image={url,filename};
+   await listing.save();
+   }
     req.flash('success','Successfully updated Listing!');
     res.redirect(`/listings/${id}`);
 };
