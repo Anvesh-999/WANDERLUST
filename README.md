@@ -185,3 +185,10 @@ Anvesh Anumolu – Full Stack Developer
 
 - 📫 [GitHub](https://github.com/Anvesh-999)
 - 🌐 [LinkedIn](https://www.linkedin.com/in/anvesh-anumolu-472a66291/)
+
+📜 License
+
+This project is licensed under the MIT License.
+Feel free to use and modify with proper attribution.
+
+⭐ If you like this project, don’t forget to star the repo!
