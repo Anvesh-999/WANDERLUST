@@ -1,13 +1,14 @@
 # 🌍 WANDERLUST
+> 🧳 A full-stack travel and hotel booking platform built with Node.js, Express, MongoDB, and EJS.
 
 [![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white)](https://expressjs.com/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![EJS](https://img.shields.io/badge/EJS-4B0082?logo=EJS&logoColor=white)](https://ejs.co/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
 
-Wanderlust is a full-stack travel and hotel booking platform.
-Users can explore, add, edit, and manage hotel listings through a dynamic backend and responsive EJS frontend.
 ---
 
 ✨ Features
@@ -36,6 +37,7 @@ Users can explore, add, edit, and manage hotel listings through a dynamic backen
 
 - 📱 Responsive Design – Built using Bootstrap for an elegant and mobile-friendly UI.
 
+- 🗺️ **Mapbox Integration** – Interactive maps display property locations dynamically
 
 ---
 
@@ -47,6 +49,7 @@ Users can explore, add, edit, and manage hotel listings through a dynamic backen
 - **Authentication** Passport.js
 - **Validation:** Joi  
 - **Cloud Storage:** Cloudinary
+- **Maps:** Mapbox GL JS (Geocoding & Interactive Maps) 
 - **Version Control:** Git & GitHub  
 
 ---
@@ -70,6 +73,7 @@ WANDERLUST/
 │   │   └── rating.css
 │   │   └── style.css
 │   └── js/
+│       └── map.js
 │       └── script.js
 ├── routes/
 │   ├── listing.js
@@ -97,6 +101,7 @@ WANDERLUST/
 │  
 ├── .gitignore
 ├── app.js               # Main server file
+├── cloudConfig.js        
 ├── middleware.js        # Custom middleware (auth, validation)
 ├── package-lock.json
 ├── package.json  
@@ -125,6 +130,7 @@ Create a .env file in the project root and add your credentials:
   CLOUDINARY_KEY=your_api_key
   CLOUDINARY_SECRET=your_api_secret
   MONGO_URI=your_mongodb_connection_string
+  MAPBOX_TOKEN=your_mapbox_token
   PORT=3000
 ```
 ▶️ 4. Run the Application
@@ -163,6 +169,15 @@ Now open your browser and visit:
 - Cloudinary securely stores images in the cloud.
 
 - Each listing is linked with a Cloudinary image URL.
+
+🗺️ Mapbox Integration
+
+Displays property locations on an interactive map
+
+Uses Mapbox Geocoding API to convert locations into coordinates
+
+Adds custom markers for each listing on the map
+
 
 👨‍💻 Author
 
