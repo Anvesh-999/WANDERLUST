@@ -13,29 +13,29 @@
 
 ✨ Features
 
-- 🏠 Add new listings – Create new property listings at /listings/new
+- 🏠 **Add new listings** – Create new property listings at `/listings/new`
 
-- 🌆 Cloudinary Image Storage – Securely upload and store images in the cloud.
+- 🌆 **Cloudinary Image Storage** – Securely upload and store images in the cloud
 
-- 🔍 View single listing – Display details dynamically at /listings/:id
+- 🔍 **View single listing** – Display details dynamically at `/listings/:id`
 
-- ✏️ Edit/Delete listings – Modify or remove listings at /listings/:id/edit
+- ✏️ **Edit/Delete listings** – Modify or remove listings at `/listings/:id/edit`
 
-- 🎨 Dynamic EJS templates – Responsive and elegant UI using Bootstrap
+- 🎨 **Dynamic EJS templates** – Responsive and elegant UI using Bootstrap
 
-- 🗄️ MongoDB Integration – Database operations handled via Mongoose
+- 🗄️ **MongoDB Integration** – Database operations handled via Mongoose
 
-- ⚙️ Full CRUD Functionality – Create, Read, Update, and Delete listings seamlessly
+- ⚙️ **Full CRUD Functionality** – Create, Read, Update, and Delete listings seamlessly
 
-- 🔐 User Authentication & Authorization – Secure access control using Passport
+- 🔐 **User Authentication & Authorization** – Secure access control using Passport
 
-- ✅ Input Validation – Validate user data using Joi (schema.js)
+- ✅ **Input Validation** – Validate user data using Joi (`schema.js`)
 
-- 💬 Flash Messages – Instant success/error feedback for user actions
+- 💬 **Flash Messages** – Instant success/error feedback for user actions
 
-- 🧩 MVC Architecture – Clean separation of:
+- 🧩 **MVC Architecture** – Clean separation of controller, model, and view layers
 
-- 📱 Responsive Design – Built using Bootstrap for an elegant and mobile-friendly UI.
+- 📱 **Responsive Design** – Mobile-friendly UI using Bootstrap
 
 - 🗺️ **Mapbox Integration** – Interactive maps display property locations dynamically
 
