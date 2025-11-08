@@ -16,6 +16,18 @@ const listingRouter =require('./routes/listing.js');
 const reviewRouter =require('./routes/review.js');
 const userRouter =require('./routes/user.js');
 
+const dbUrl = process.env.ATLASDB_URL;
+
+
+connectDB().then(()=>{
+    console.log("connected to Db");
+}).catch((err)=>console.log(err));
+
+async function connectDB(){
+    await mongoose.connect(dbUrl);
+}
+
+
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 app.use(express.urlencoded({extended : true}));
@@ -35,10 +47,6 @@ const sessionConfig = {
     }
 };
 
-app.get('/',(req,res)=>{
-    res.send("Welcome to Wanderlust");
-});
-
 
 app.use(session(sessionConfig));
 app.use(flash());
@@ -54,16 +62,10 @@ app.use((req,res,next)=>{
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
     res.locals.currUser = req.user;
+    res.locals.filterCategory = null;
+    res.locals.searchQuery = null;    
     next();
 });
-
-connectDB().then(()=>{
-    console.log("connected to Db");
-}).catch((err)=>console.log(err));
-
-async function connectDB(){
-    await mongoose.connect('mongodb://127.0.0.1:27017/wanderlust');
-}
 
 
 
