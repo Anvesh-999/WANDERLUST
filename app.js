@@ -61,6 +61,9 @@ const sessionConfig = {
     }
 };
 
+app.get('/',(req,res)=>{
+    res.render('home.ejs');
+});
 
 app.use(session(sessionConfig));
 app.use(flash());
