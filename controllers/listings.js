@@ -19,7 +19,7 @@ module.exports.showListing = async (req,res)=>{
             req.flash('error',"The listing your'e trying to access does not exist.");
             return res.redirect('/listings');
         }
-        res.render('listings/show.ejs',{listing});
+        res.render('listings/show.ejs', {listing,mapToken});
 };
 
 module.exports.createListing = async(req,res,next)=>{
