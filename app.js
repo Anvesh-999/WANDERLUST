@@ -61,9 +61,6 @@ const sessionConfig = {
     }
 };
 
-app.get('/',(req,res)=>{
-    res.render('index.ejs');
-});
 
 app.use(session(sessionConfig));
 app.use(flash());
@@ -84,7 +81,9 @@ app.use((req,res,next)=>{
     next();
 });
 
-
+app.get('/',(req,res)=>{
+    res.render('index.ejs');
+});
 
 app.use('/listings',listingRouter);
 app.use('/listings/:id/reviews',reviewRouter);
