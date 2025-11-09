@@ -10,34 +10,34 @@
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
 
 ---
+## 🌐 Live Demo  
 
+🔗 **Try it here:** [https://wanderlust-vb88.onrender.com](https://wanderlust-vb88.onrender.com)
+
+---
 ✨ Features
 
-- 🏠 **Add new listings** – Create new property listings at `/listings/new`
+- 🏠 **Add new listings** – Create property listings with descriptions and images
 
-- 🌆 **Cloudinary Image Storage** – Securely upload and store images in the cloud
+- 🌆 **Cloudinary Image Storage** – Secure, cloud-based image uploads
 
-- 🔍 **View single listing** – Display details dynamically at `/listings/:id`
+- 🔍 **Search & Filter** – Browse listings by location or category
 
-- ✏️ **Edit/Delete listings** – Modify or remove listings at `/listings/:id/edit`
+- 🗺️ **Mapbox Integration** – Interactive maps to view locations
 
-- 🎨 **Dynamic EJS templates** – Responsive and elegant UI using Bootstrap
+- ✏️ **Edit/Delete listings** – Full control over property management
 
-- 🗄️ **MongoDB Integration** – Database operations handled via Mongoose
+- 🔐 **User Authentication & Authorization** – Secure login and role-based access
 
-- ⚙️ **Full CRUD Functionality** – Create, Read, Update, and Delete listings seamlessly
+- ✅ **Input Validation** – Validate user inputs using Joi
 
-- 🔐 **User Authentication & Authorization** – Secure access control using Passport
+- 💬 **Flash Messages** – Real-time success/error notifications
 
-- ✅ **Input Validation** – Validate user data using Joi (`schema.js`)
+- 🧩 **MVC Architecture** – Organized structure for scalability
 
-- 💬 **Flash Messages** – Instant success/error feedback for user actions
+- 📱 **Responsive Design** – Optimized for both mobile and desktop
 
-- 🧩 **MVC Architecture** – Clean separation of controller, model, and view layers
-
-- 📱 **Responsive Design** – Mobile-friendly UI using Bootstrap
-
-- 🗺️ **Mapbox Integration** – Interactive maps display property locations dynamically
+- ⚙️ **Session Management** – MongoDB session store for user persistence  
 
 ---
 
@@ -50,7 +50,7 @@
 - **Validation:** Joi  
 - **Cloud Storage:** Cloudinary
 - **Maps:** Mapbox GL JS (Geocoding & Interactive Maps) 
-- **Version Control:** Git & GitHub  
+- **Deployment:** Render
 
 ---
 
@@ -126,12 +126,14 @@ Follow these simple steps to get Wanderlust running locally 👇
 🔐 3. Configure Environment Variables
 Create a .env file in the project root and add your credentials:
 ```bash
-  CLOUDINARY_CLOUD_NAME=your_cloud_name
-  CLOUDINARY_KEY=your_api_key
-  CLOUDINARY_SECRET=your_api_secret
-  MONGO_URI=your_mongodb_connection_string
-  MAPBOX_TOKEN=your_mapbox_token
-  PORT=3000
+ATLASDB_URL=your_mongodb_atlas_connection_string
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_KEY=your_api_key
+CLOUDINARY_SECRET=your_api_secret
+MAPBOX_TOKEN=your_mapbox_token
+SECRET=your_random_secret
+PORT=8080
+
 ```
 ▶️ 4. Run the Application
 ```bash 
@@ -172,12 +174,33 @@ Now open your browser and visit:
 
 🗺️ Mapbox Integration
 
-Displays property locations on an interactive map
+- Displays property locations on an interactive map
 
-Uses Mapbox Geocoding API to convert locations into coordinates
+- Uses Mapbox Geocoding API to convert locations into coordinates
 
-Adds custom markers for each listing on the map
+- Adds custom markers for each listing on the map
 
+🔒 Authentication
+
+- Built using Passport.js and express-session
+
+- Supports signup, login, logout, and session persistence
+
+- Authorization middleware ensures only listing owners can edit or delete their properties
+
+💬 Flash & Error Handling
+
+- Flash messages for success and errors (using connect-flash)
+
+- Centralized error handling via custom ExpressError class
+
+🧱 MVC Architecture
+
+- Model: MongoDB schemas for Listings, Users, Reviews
+
+- View: EJS templates rendered dynamically
+
+- Controller: Handles business logic and route operations
 
 👨‍💻 Author
 
@@ -185,6 +208,7 @@ Anvesh Anumolu – Full Stack Developer
 
 - 📫 [GitHub](https://github.com/Anvesh-999)
 - 🌐 [LinkedIn](https://www.linkedin.com/in/anvesh-anumolu-472a66291/)
+- 🧭 [Live Demo](https://wanderlust-vb88.onrender.com)
 
 📜 License
 
