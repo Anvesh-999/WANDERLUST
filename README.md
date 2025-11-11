@@ -142,7 +142,7 @@ PORT=8080
 🌐 5. Access the App
 Now open your browser and visit:
 ```bash
-👉 http://localhost:3000/listings
+👉 http://localhost:8080/listings
 ```
 
 ----
